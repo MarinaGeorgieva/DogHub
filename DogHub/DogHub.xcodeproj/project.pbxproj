@@ -1,0 +1,541 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BDEF06D21C5FE17A006D238E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDEF06D11C5FE17A006D238E /* main.m */; };
+		BDEF06D51C5FE17A006D238E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDEF06D41C5FE17A006D238E /* AppDelegate.m */; };
+		BDEF06D81C5FE17A006D238E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDEF06D71C5FE17A006D238E /* ViewController.m */; };
+		BDEF06DB1C5FE17A006D238E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDEF06D91C5FE17A006D238E /* Main.storyboard */; };
+		BDEF06DE1C5FE17A006D238E /* DogHub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BDEF06DC1C5FE17A006D238E /* DogHub.xcdatamodeld */; };
+		BDEF06E01C5FE17A006D238E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDEF06DF1C5FE17A006D238E /* Assets.xcassets */; };
+		BDEF06E31C5FE17A006D238E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDEF06E11C5FE17A006D238E /* LaunchScreen.storyboard */; };
+		BDEF06EE1C5FE17A006D238E /* DogHubTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDEF06ED1C5FE17A006D238E /* DogHubTests.m */; };
+		BDEF06F91C5FE17A006D238E /* DogHubUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDEF06F81C5FE17A006D238E /* DogHubUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BDEF06EA1C5FE17A006D238E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDEF06C51C5FE17A006D238E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BDEF06CC1C5FE17A006D238E;
+			remoteInfo = DogHub;
+		};
+		BDEF06F51C5FE17A006D238E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDEF06C51C5FE17A006D238E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BDEF06CC1C5FE17A006D238E;
+			remoteInfo = DogHub;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BDEF06CD1C5FE17A006D238E /* DogHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDEF06D11C5FE17A006D238E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BDEF06D31C5FE17A006D238E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BDEF06D41C5FE17A006D238E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BDEF06D61C5FE17A006D238E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BDEF06D71C5FE17A006D238E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BDEF06DA1C5FE17A006D238E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BDEF06DD1C5FE17A006D238E /* DogHub.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DogHub.xcdatamodel; sourceTree = "<group>"; };
+		BDEF06DF1C5FE17A006D238E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BDEF06E21C5FE17A006D238E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BDEF06E41C5FE17A006D238E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDEF06E91C5FE17A006D238E /* DogHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDEF06ED1C5FE17A006D238E /* DogHubTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DogHubTests.m; sourceTree = "<group>"; };
+		BDEF06EF1C5FE17A006D238E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDEF06F41C5FE17A006D238E /* DogHubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogHubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDEF06F81C5FE17A006D238E /* DogHubUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DogHubUITests.m; sourceTree = "<group>"; };
+		BDEF06FA1C5FE17A006D238E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BDEF06CA1C5FE17A006D238E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDEF06E61C5FE17A006D238E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDEF06F11C5FE17A006D238E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BDEF06C41C5FE17A006D238E = {
+			isa = PBXGroup;
+			children = (
+				BDEF06CF1C5FE17A006D238E /* DogHub */,
+				BDEF06EC1C5FE17A006D238E /* DogHubTests */,
+				BDEF06F71C5FE17A006D238E /* DogHubUITests */,
+				BDEF06CE1C5FE17A006D238E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BDEF06CE1C5FE17A006D238E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BDEF06CD1C5FE17A006D238E /* DogHub.app */,
+				BDEF06E91C5FE17A006D238E /* DogHubTests.xctest */,
+				BDEF06F41C5FE17A006D238E /* DogHubUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BDEF06CF1C5FE17A006D238E /* DogHub */ = {
+			isa = PBXGroup;
+			children = (
+				BDEF06D31C5FE17A006D238E /* AppDelegate.h */,
+				BDEF06D41C5FE17A006D238E /* AppDelegate.m */,
+				BDEF06D61C5FE17A006D238E /* ViewController.h */,
+				BDEF06D71C5FE17A006D238E /* ViewController.m */,
+				BDEF06D91C5FE17A006D238E /* Main.storyboard */,
+				BDEF06DF1C5FE17A006D238E /* Assets.xcassets */,
+				BDEF06E11C5FE17A006D238E /* LaunchScreen.storyboard */,
+				BDEF06E41C5FE17A006D238E /* Info.plist */,
+				BDEF06DC1C5FE17A006D238E /* DogHub.xcdatamodeld */,
+				BDEF06D01C5FE17A006D238E /* Supporting Files */,
+			);
+			path = DogHub;
+			sourceTree = "<group>";
+		};
+		BDEF06D01C5FE17A006D238E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BDEF06D11C5FE17A006D238E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BDEF06EC1C5FE17A006D238E /* DogHubTests */ = {
+			isa = PBXGroup;
+			children = (
+				BDEF06ED1C5FE17A006D238E /* DogHubTests.m */,
+				BDEF06EF1C5FE17A006D238E /* Info.plist */,
+			);
+			path = DogHubTests;
+			sourceTree = "<group>";
+		};
+		BDEF06F71C5FE17A006D238E /* DogHubUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BDEF06F81C5FE17A006D238E /* DogHubUITests.m */,
+				BDEF06FA1C5FE17A006D238E /* Info.plist */,
+			);
+			path = DogHubUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BDEF06CC1C5FE17A006D238E /* DogHub */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDEF06FD1C5FE17A006D238E /* Build configuration list for PBXNativeTarget "DogHub" */;
+			buildPhases = (
+				BDEF06C91C5FE17A006D238E /* Sources */,
+				BDEF06CA1C5FE17A006D238E /* Frameworks */,
+				BDEF06CB1C5FE17A006D238E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DogHub;
+			productName = DogHub;
+			productReference = BDEF06CD1C5FE17A006D238E /* DogHub.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BDEF06E81C5FE17A006D238E /* DogHubTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDEF07001C5FE17A006D238E /* Build configuration list for PBXNativeTarget "DogHubTests" */;
+			buildPhases = (
+				BDEF06E51C5FE17A006D238E /* Sources */,
+				BDEF06E61C5FE17A006D238E /* Frameworks */,
+				BDEF06E71C5FE17A006D238E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BDEF06EB1C5FE17A006D238E /* PBXTargetDependency */,
+			);
+			name = DogHubTests;
+			productName = DogHubTests;
+			productReference = BDEF06E91C5FE17A006D238E /* DogHubTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BDEF06F31C5FE17A006D238E /* DogHubUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDEF07031C5FE17A006D238E /* Build configuration list for PBXNativeTarget "DogHubUITests" */;
+			buildPhases = (
+				BDEF06F01C5FE17A006D238E /* Sources */,
+				BDEF06F11C5FE17A006D238E /* Frameworks */,
+				BDEF06F21C5FE17A006D238E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BDEF06F61C5FE17A006D238E /* PBXTargetDependency */,
+			);
+			name = DogHubUITests;
+			productName = DogHubUITests;
+			productReference = BDEF06F41C5FE17A006D238E /* DogHubUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BDEF06C51C5FE17A006D238E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Marina Georgieva";
+				TargetAttributes = {
+					BDEF06CC1C5FE17A006D238E = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = PXEG9GD6UJ;
+					};
+					BDEF06E81C5FE17A006D238E = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = PXEG9GD6UJ;
+						TestTargetID = BDEF06CC1C5FE17A006D238E;
+					};
+					BDEF06F31C5FE17A006D238E = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = PXEG9GD6UJ;
+						TestTargetID = BDEF06CC1C5FE17A006D238E;
+					};
+				};
+			};
+			buildConfigurationList = BDEF06C81C5FE17A006D238E /* Build configuration list for PBXProject "DogHub" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BDEF06C41C5FE17A006D238E;
+			productRefGroup = BDEF06CE1C5FE17A006D238E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BDEF06CC1C5FE17A006D238E /* DogHub */,
+				BDEF06E81C5FE17A006D238E /* DogHubTests */,
+				BDEF06F31C5FE17A006D238E /* DogHubUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BDEF06CB1C5FE17A006D238E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDEF06E31C5FE17A006D238E /* LaunchScreen.storyboard in Resources */,
+				BDEF06E01C5FE17A006D238E /* Assets.xcassets in Resources */,
+				BDEF06DB1C5FE17A006D238E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDEF06E71C5FE17A006D238E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDEF06F21C5FE17A006D238E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BDEF06C91C5FE17A006D238E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDEF06DE1C5FE17A006D238E /* DogHub.xcdatamodeld in Sources */,
+				BDEF06D81C5FE17A006D238E /* ViewController.m in Sources */,
+				BDEF06D51C5FE17A006D238E /* AppDelegate.m in Sources */,
+				BDEF06D21C5FE17A006D238E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDEF06E51C5FE17A006D238E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDEF06EE1C5FE17A006D238E /* DogHubTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDEF06F01C5FE17A006D238E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDEF06F91C5FE17A006D238E /* DogHubUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BDEF06EB1C5FE17A006D238E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BDEF06CC1C5FE17A006D238E /* DogHub */;
+			targetProxy = BDEF06EA1C5FE17A006D238E /* PBXContainerItemProxy */;
+		};
+		BDEF06F61C5FE17A006D238E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BDEF06CC1C5FE17A006D238E /* DogHub */;
+			targetProxy = BDEF06F51C5FE17A006D238E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BDEF06D91C5FE17A006D238E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDEF06DA1C5FE17A006D238E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BDEF06E11C5FE17A006D238E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDEF06E21C5FE17A006D238E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BDEF06FB1C5FE17A006D238E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BDEF06FC1C5FE17A006D238E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BDEF06FE1C5FE17A006D238E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DogHub/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mg.DogHub;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BDEF06FF1C5FE17A006D238E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DogHub/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mg.DogHub;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BDEF07011C5FE17A006D238E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DogHubTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mg.DogHubTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DogHub.app/DogHub";
+			};
+			name = Debug;
+		};
+		BDEF07021C5FE17A006D238E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DogHubTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mg.DogHubTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DogHub.app/DogHub";
+			};
+			name = Release;
+		};
+		BDEF07041C5FE17A006D238E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DogHubUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mg.DogHubUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DogHub;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		BDEF07051C5FE17A006D238E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DogHubUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mg.DogHubUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DogHub;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BDEF06C81C5FE17A006D238E /* Build configuration list for PBXProject "DogHub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDEF06FB1C5FE17A006D238E /* Debug */,
+				BDEF06FC1C5FE17A006D238E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDEF06FD1C5FE17A006D238E /* Build configuration list for PBXNativeTarget "DogHub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDEF06FE1C5FE17A006D238E /* Debug */,
+				BDEF06FF1C5FE17A006D238E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BDEF07001C5FE17A006D238E /* Build configuration list for PBXNativeTarget "DogHubTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDEF07011C5FE17A006D238E /* Debug */,
+				BDEF07021C5FE17A006D238E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BDEF07031C5FE17A006D238E /* Build configuration list for PBXNativeTarget "DogHubUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDEF07041C5FE17A006D238E /* Debug */,
+				BDEF07051C5FE17A006D238E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BDEF06DC1C5FE17A006D238E /* DogHub.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BDEF06DD1C5FE17A006D238E /* DogHub.xcdatamodel */,
+			);
+			currentVersion = BDEF06DD1C5FE17A006D238E /* DogHub.xcdatamodel */;
+			path = DogHub.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BDEF06C51C5FE17A006D238E /* Project object */;
+}
