@@ -6,9 +6,9 @@
 //  Copyright © 2016 Marina Georgieva. All rights reserved.
 //
 
-#import "HomewViewController.h"
+#import "HomeViewController.h"
 
-@implementation HomewViewController
+@implementation HomeViewController
 
 -(void)viewDidLoad{
     NSLog(@"Home controller");

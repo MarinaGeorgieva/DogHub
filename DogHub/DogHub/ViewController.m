@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "HomewViewController.h"
+#import "HomeViewController.h"
 #import <Parse.h>
 
 @interface ViewController ()
@@ -36,7 +36,7 @@
     [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser *user, NSError *error) {
         if (user) {
             // Do stuff after successful login.
-            HomewViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
+            HomeViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
             [self.navigationController presentViewController:vc animated:YES completion:nil];
         } else {
             // The login failed. Check error to see why.
