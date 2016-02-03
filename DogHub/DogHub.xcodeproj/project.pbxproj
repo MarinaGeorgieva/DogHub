@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88B1D5FFFEF0F01CE7CB0E60 /* libPods-DogHub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C020E160BEC77DA3731706 /* libPods-DogHub.a */; };
+		BDCC57E11C625FDA00EA2104 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC57E01C625FDA00EA2104 /* RegisterViewController.m */; };
+		BDCC57E41C62670A00EA2104 /* HomewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC57E31C62670A00EA2104 /* HomewViewController.m */; };
 		BDEF06D21C5FE17A006D238E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDEF06D11C5FE17A006D238E /* main.m */; };
 		BDEF06D51C5FE17A006D238E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDEF06D41C5FE17A006D238E /* AppDelegate.m */; };
 		BDEF06D81C5FE17A006D238E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDEF06D71C5FE17A006D238E /* ViewController.m */; };
@@ -36,6 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		575B41DDD17673057F4933AE /* Pods-DogHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DogHub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DogHub/Pods-DogHub.debug.xcconfig"; sourceTree = "<group>"; };
+		78C020E160BEC77DA3731706 /* libPods-DogHub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DogHub.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDCC57DF1C625FDA00EA2104 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		BDCC57E01C625FDA00EA2104 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		BDCC57E21C62670A00EA2104 /* HomewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomewViewController.h; sourceTree = "<group>"; };
+		BDCC57E31C62670A00EA2104 /* HomewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomewViewController.m; sourceTree = "<group>"; };
 		BDEF06CD1C5FE17A006D238E /* DogHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDEF06D11C5FE17A006D238E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BDEF06D31C5FE17A006D238E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,6 +62,7 @@
 		BDEF06F41C5FE17A006D238E /* DogHubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogHubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDEF06F81C5FE17A006D238E /* DogHubUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DogHubUITests.m; sourceTree = "<group>"; };
 		BDEF06FA1C5FE17A006D238E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBC0222D39122CDAD4F7CD80 /* Pods-DogHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DogHub.release.xcconfig"; path = "Pods/Target Support Files/Pods-DogHub/Pods-DogHub.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88B1D5FFFEF0F01CE7CB0E60 /* libPods-DogHub.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +91,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4005C76D5307805F4DC4B965 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78C020E160BEC77DA3731706 /* libPods-DogHub.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		416934B4E31F62E4355EDC4E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				575B41DDD17673057F4933AE /* Pods-DogHub.debug.xcconfig */,
+				EBC0222D39122CDAD4F7CD80 /* Pods-DogHub.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BDEF06C41C5FE17A006D238E = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +115,8 @@
 				BDEF06EC1C5FE17A006D238E /* DogHubTests */,
 				BDEF06F71C5FE17A006D238E /* DogHubUITests */,
 				BDEF06CE1C5FE17A006D238E /* Products */,
+				416934B4E31F62E4355EDC4E /* Pods */,
+				4005C76D5307805F4DC4B965 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +143,10 @@
 				BDEF06E41C5FE17A006D238E /* Info.plist */,
 				BDEF06DC1C5FE17A006D238E /* DogHub.xcdatamodeld */,
 				BDEF06D01C5FE17A006D238E /* Supporting Files */,
+				BDCC57DF1C625FDA00EA2104 /* RegisterViewController.h */,
+				BDCC57E01C625FDA00EA2104 /* RegisterViewController.m */,
+				BDCC57E21C62670A00EA2104 /* HomewViewController.h */,
+				BDCC57E31C62670A00EA2104 /* HomewViewController.m */,
 			);
 			path = DogHub;
 			sourceTree = "<group>";
@@ -150,9 +184,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BDEF06FD1C5FE17A006D238E /* Build configuration list for PBXNativeTarget "DogHub" */;
 			buildPhases = (
+				F689C3E0D8D397F3FB1359D0 /* Check Pods Manifest.lock */,
 				BDEF06C91C5FE17A006D238E /* Sources */,
 				BDEF06CA1C5FE17A006D238E /* Frameworks */,
 				BDEF06CB1C5FE17A006D238E /* Resources */,
+				EB9D1E0C0238EF120EC3514F /* Embed Pods Frameworks */,
+				43BACCE95574E621F3323246 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -271,13 +308,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		43BACCE95574E621F3323246 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DogHub/Pods-DogHub-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB9D1E0C0238EF120EC3514F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DogHub/Pods-DogHub-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F689C3E0D8D397F3FB1359D0 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BDEF06C91C5FE17A006D238E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDCC57E11C625FDA00EA2104 /* RegisterViewController.m in Sources */,
 				BDEF06DE1C5FE17A006D238E /* DogHub.xcdatamodeld in Sources */,
 				BDEF06D81C5FE17A006D238E /* ViewController.m in Sources */,
+				BDCC57E41C62670A00EA2104 /* HomewViewController.m in Sources */,
 				BDEF06D51C5FE17A006D238E /* AppDelegate.m in Sources */,
 				BDEF06D21C5FE17A006D238E /* main.m in Sources */,
 			);
@@ -418,6 +505,7 @@
 		};
 		BDEF06FE1C5FE17A006D238E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 575B41DDD17673057F4933AE /* Pods-DogHub.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DogHub/Info.plist;
@@ -429,6 +517,7 @@
 		};
 		BDEF06FF1C5FE17A006D238E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBC0222D39122CDAD4F7CD80 /* Pods-DogHub.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DogHub/Info.plist;
@@ -505,6 +594,7 @@
 				BDEF06FF1C5FE17A006D238E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BDEF07001C5FE17A006D238E /* Build configuration list for PBXNativeTarget "DogHubTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +603,7 @@
 				BDEF07021C5FE17A006D238E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BDEF07031C5FE17A006D238E /* Build configuration list for PBXNativeTarget "DogHubUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +612,7 @@
 				BDEF07051C5FE17A006D238E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
