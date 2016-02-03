@@ -1,0 +1,18 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '8.0'
+# Uncomment this line if you're using Swift
+# use_frameworks!
+workspace 'DogHub'
+target 'DogHub' do
+
+pod 'Parse'
+end
+
+target 'DogHubTests' do
+
+end
+
+target 'DogHubUITests' do
+
+end
+
