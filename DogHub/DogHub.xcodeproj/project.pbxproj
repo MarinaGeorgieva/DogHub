@@ -10,6 +10,7 @@
 		88B1D5FFFEF0F01CE7CB0E60 /* libPods-DogHub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C020E160BEC77DA3731706 /* libPods-DogHub.a */; };
 		BD5C19E81C62C2C000A060F3 /* PlaceDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5C19E71C62C2C000A060F3 /* PlaceDetailsViewController.m */; };
 		BD5C19EB1C62CB5C00A060F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD5C19E91C62CB5C00A060F3 /* Main.storyboard */; };
+		BD5C19EE1C62CEC500A060F3 /* AddPlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5C19ED1C62CEC500A060F3 /* AddPlaceViewController.m */; };
 		BDCC57E11C625FDA00EA2104 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC57E01C625FDA00EA2104 /* RegisterViewController.m */; };
 		BDCC57E41C62670A00EA2104 /* PlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC57E31C62670A00EA2104 /* PlacesViewController.m */; };
 		BDCC57E91C62A9D700EA2104 /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC57E81C62A9D700EA2104 /* Place.m */; };
@@ -46,6 +47,8 @@
 		BD5C19E61C62C2C000A060F3 /* PlaceDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceDetailsViewController.h; sourceTree = "<group>"; };
 		BD5C19E71C62C2C000A060F3 /* PlaceDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceDetailsViewController.m; sourceTree = "<group>"; };
 		BD5C19EA1C62CB5C00A060F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BD5C19EC1C62CEC500A060F3 /* AddPlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPlaceViewController.h; sourceTree = "<group>"; };
+		BD5C19ED1C62CEC500A060F3 /* AddPlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPlaceViewController.m; sourceTree = "<group>"; };
 		BDCC57DF1C625FDA00EA2104 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		BDCC57E01C625FDA00EA2104 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		BDCC57E21C62670A00EA2104 /* PlacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacesViewController.h; sourceTree = "<group>"; };
@@ -125,6 +128,8 @@
 				BDCC57E31C62670A00EA2104 /* PlacesViewController.m */,
 				BD5C19E61C62C2C000A060F3 /* PlaceDetailsViewController.h */,
 				BD5C19E71C62C2C000A060F3 /* PlaceDetailsViewController.m */,
+				BD5C19EC1C62CEC500A060F3 /* AddPlaceViewController.h */,
+				BD5C19ED1C62CEC500A060F3 /* AddPlaceViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -387,6 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD5C19EE1C62CEC500A060F3 /* AddPlaceViewController.m in Sources */,
 				BDCC57E11C625FDA00EA2104 /* RegisterViewController.m in Sources */,
 				BD5C19E81C62C2C000A060F3 /* PlaceDetailsViewController.m in Sources */,
 				BDEF06DE1C5FE17A006D238E /* DogHub.xcdatamodeld in Sources */,

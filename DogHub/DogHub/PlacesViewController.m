@@ -6,6 +6,7 @@
 //  Copyright © 2016 Marina Georgieva. All rights reserved.
 //
 
+#import "AddPlaceViewController.h"
 #import "PlacesViewController.h"
 #import "PlaceDetailsViewController.h"
 #import "Place.h"
@@ -30,8 +31,6 @@
             [self.tableView reloadData];
         }
     }];
-    
-    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -58,6 +57,13 @@
     PlaceDetailsViewController *detailsViewController = [self.storyboard instantiateViewControllerWithIdentifier:storyboardId];
     detailsViewController.place = place;
     [self.navigationController pushViewController:detailsViewController animated:YES];
+}
+
+- (void) showAdd{
+    NSString *storyboardId = @"addPlaceScene";
+    
+    AddPlaceViewController *addPlaceViewController = [self.storyboard instantiateViewControllerWithIdentifier:storyboardId];
+    [self.navigationController pushViewController:addPlaceViewController animated:YES];
 }
 
 @end

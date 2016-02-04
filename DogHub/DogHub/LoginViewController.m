@@ -35,7 +35,7 @@
     [PFUser logInWithUsernameInBackground: username password: password block:^(PFUser *user, NSError *error) {
         if (user) {
             // Do stuff after successful login.
-            PlacesViewController *placesViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PlacesViewController"];
+            PlacesViewController *placesViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"allPlacesScene"];
             [self.navigationController pushViewController:placesViewController animated:YES];
         }
         else {
