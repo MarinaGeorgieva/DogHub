@@ -14,11 +14,13 @@
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *desc;
 @property (strong, nonatomic) NSString *category;
+@property (strong, nonatomic) PFFile *image;
 
 + (NSString *)parseClassName;
 
 + (Place *) placeWithName: (NSString *) name
        andWithDescription: (NSString *) desc
-          andWithCategory: (NSString *) category;
+          andWithCategory: (NSString *) category
+             andWithImage: (PFFile *) image;
 
 @end

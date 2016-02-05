@@ -13,6 +13,7 @@
 @dynamic name;
 @dynamic desc;
 @dynamic category;
+@dynamic image;
 
 + (void)load {
     [self registerSubclass];
@@ -24,11 +25,13 @@
 
 + (Place *) placeWithName:(NSString *)name
        andWithDescription:(NSString *)desc
-          andWithCategory:(NSString *)category {
+          andWithCategory:(NSString *)category
+             andWithImage:(PFFile *)image{
     Place *place = [Place object];
     place.name = name;
     place.desc = desc;
     place.category = category;
+    place.image = image;
     return place; 
 }
 

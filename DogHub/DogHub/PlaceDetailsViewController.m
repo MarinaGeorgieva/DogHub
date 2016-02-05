@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -24,6 +25,14 @@
     self.nameLabel.text = self.place.name;
     self.descriptionLabel.text = self.place.desc;
     self.categoryLabel.text = self.place.category;
+    
+    [self.place.image getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+        if (!error) {
+            UIImage *image = [UIImage imageWithData:imageData];
+            self.imageView.image = image;
+        }
+    }];
+
 }
 
 @end

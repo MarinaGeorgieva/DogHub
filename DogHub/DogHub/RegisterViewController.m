@@ -20,6 +20,11 @@
 @end
 
 @implementation RegisterViewController
+
+- (void)viewDidLoad{
+    [super viewDidLoad];
+}
+
 - (IBAction)register:(id)sender {
     PFUser *user = [PFUser user];
     user.username = self.username.text;

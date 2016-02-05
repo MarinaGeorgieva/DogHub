@@ -80,19 +80,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hI-ty-Km9">
-                                <rect key="frame" x="66" y="60" width="242" height="58"/>
+                                <rect key="frame" x="0.0" y="58" width="375" height="58"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nts-WN-3vC">
-                                <rect key="frame" x="66" y="156" width="242" height="58"/>
+                                <rect key="frame" x="66" y="349" width="242" height="58"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yIJ-ux-XKM">
+                                <rect key="frame" x="0.0" y="114" width="375" height="234"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nbv-1s-UUg">
-                                <rect key="frame" x="66" y="238" width="242" height="58"/>
+                                <rect key="frame" x="66" y="415" width="242" height="58"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -104,6 +107,7 @@
                     <connections>
                         <outlet property="categoryLabel" destination="Nbv-1s-UUg" id="apv-SV-3GJ"/>
                         <outlet property="descriptionLabel" destination="nts-WN-3vC" id="VDt-aY-cDn"/>
+                        <outlet property="imageView" destination="yIJ-ux-XKM" id="0CU-II-Y14"/>
                         <outlet property="nameLabel" destination="9hI-ty-Km9" id="5ru-Ms-3Rd"/>
                     </connections>
                 </viewController>
@@ -180,7 +184,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vh8-Ro-JMX">
-                                <rect key="frame" x="57" y="258" width="260" height="41"/>
+                                <rect key="frame" x="57" y="526" width="260" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
@@ -193,6 +197,23 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6xI-wd-Stb">
+                                <rect key="frame" x="42" y="224" width="313" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2T-hW-YUc">
+                                <rect key="frame" x="42" y="377" width="140" height="45"/>
+                                <state key="normal" title="Take Photo"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="JYg-MH-H46" eventType="touchUpInside" id="PmK-o6-iLz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4II-bX-dip">
+                                <rect key="frame" x="215" y="377" width="140" height="45"/>
+                                <state key="normal" title="Select Photo"/>
+                                <connections>
+                                    <action selector="selectPhoto:" destination="JYg-MH-H46" eventType="touchUpInside" id="kKq-f8-oWb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -200,6 +221,7 @@
                     <connections>
                         <outlet property="categoryTextField" destination="30O-fm-AoH" id="r1C-vw-ET0"/>
                         <outlet property="descriptionTextField" destination="72M-IY-NGt" id="RPV-IN-AAj"/>
+                        <outlet property="imageView" destination="6xI-wd-Stb" id="1mf-qz-5oP"/>
                         <outlet property="nameTextField" destination="aux-6F-S6X" id="sag-ho-qtX"/>
                     </connections>
                 </viewController>
