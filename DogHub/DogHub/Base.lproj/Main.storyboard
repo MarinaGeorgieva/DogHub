@@ -115,10 +115,10 @@
             </objects>
             <point key="canvasLocation" x="602.5" y="1172.5"/>
         </scene>
-        <!--Places View Controller-->
+        <!--Places Table View Controller-->
         <scene sceneID="Yj5-Dt-9H7">
             <objects>
-                <tableViewController storyboardIdentifier="allPlacesScene" id="Axc-Bn-RN2" customClass="PlacesViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="allPlacesScene" id="Axc-Bn-RN2" customClass="PlacesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qvj-JF-Qz1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -8,7 +8,7 @@
 
 #import <Parse/Parse.h>
 #import "AddPlaceViewController.h"
-#import "PlacesViewController.h"
+#import "PlacesTableViewController.h"
 #import "Place.h"
 
 @interface AddPlaceViewController()
@@ -36,7 +36,7 @@
     [place saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
         if (succeeded) {
             NSString *storyboardId = @"allPlacesScene";
-            PlacesViewController *placesViewController = [self.storyboard instantiateViewControllerWithIdentifier:storyboardId];
+            PlacesTableViewController *placesViewController = [self.storyboard instantiateViewControllerWithIdentifier:storyboardId];
             [self.navigationController pushViewController:placesViewController animated:YES];
         }
     }];

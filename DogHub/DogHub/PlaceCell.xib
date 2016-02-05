@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="108" id="qrG-5x-Eih" customClass="PlaceCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qrG-5x-Eih" id="bNk-dQ-anU">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enq-2O-BpQ">
+                        <rect key="frame" x="142" y="8" width="131" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="36" id="cHw-PC-d2X"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbh-T2-21u">
+                        <rect key="frame" x="142" y="52" width="131" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Opa-N6-23w">
+                        <rect key="frame" x="0.0" y="0.0" width="134" height="84"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="134" id="oeK-2t-dE3"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Opa-N6-23w" firstAttribute="top" secondItem="bNk-dQ-anU" secondAttribute="top" id="a12-gM-MRF"/>
+                    <constraint firstItem="enq-2O-BpQ" firstAttribute="top" secondItem="bNk-dQ-anU" secondAttribute="topMargin" id="aMJ-QZ-8e1"/>
+                    <constraint firstItem="enq-2O-BpQ" firstAttribute="trailing" secondItem="vbh-T2-21u" secondAttribute="trailing" id="ac1-i4-N5l"/>
+                    <constraint firstItem="enq-2O-BpQ" firstAttribute="leading" secondItem="Opa-N6-23w" secondAttribute="trailing" constant="8" symbolic="YES" id="baM-mq-gqQ"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="enq-2O-BpQ" secondAttribute="trailing" constant="39" id="caK-bx-1Mg"/>
+                    <constraint firstItem="Opa-N6-23w" firstAttribute="leading" secondItem="bNk-dQ-anU" secondAttribute="leading" id="mOr-1V-53T"/>
+                    <constraint firstItem="vbh-T2-21u" firstAttribute="top" secondItem="enq-2O-BpQ" secondAttribute="bottom" constant="8" symbolic="YES" id="psa-P9-Q3g"/>
+                    <constraint firstAttribute="bottom" secondItem="Opa-N6-23w" secondAttribute="bottom" id="tyh-xb-KlF"/>
+                    <constraint firstItem="vbh-T2-21u" firstAttribute="leading" secondItem="Opa-N6-23w" secondAttribute="trailing" constant="8" symbolic="YES" id="u6m-ql-rAd"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="placeCellCategoryLabel" destination="vbh-T2-21u" id="aVk-Xx-mJz"/>
+                <outlet property="placeCellImageView" destination="Opa-N6-23w" id="NTF-JJ-FKJ"/>
+                <outlet property="placeCellNameLabel" destination="enq-2O-BpQ" id="zaM-hJ-Gxw"/>
+            </connections>
+            <point key="canvasLocation" x="129" y="260.5"/>
+        </tableViewCell>
+    </objects>
+</document>

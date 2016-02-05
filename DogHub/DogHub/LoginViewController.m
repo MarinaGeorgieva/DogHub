@@ -7,7 +7,7 @@
 //
 
 #import "LoginViewController.h"
-#import "PlacesViewController.h"
+#import "PlacesTableViewController.h"
 #import <Parse/Parse.h>
 
 @interface LoginViewController ()
@@ -33,7 +33,7 @@
     [PFUser logInWithUsernameInBackground: username password: password block:^(PFUser *user, NSError *error) {
         if (user) {
             // Do stuff after successful login.
-            PlacesViewController *placesViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"allPlacesScene"];
+            PlacesTableViewController *placesViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"allPlacesScene"];
             [self.navigationController pushViewController:placesViewController animated:YES];
         }
         else {

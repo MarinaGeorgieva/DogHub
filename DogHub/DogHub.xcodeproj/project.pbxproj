@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		88B1D5FFFEF0F01CE7CB0E60 /* libPods-DogHub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C020E160BEC77DA3731706 /* libPods-DogHub.a */; };
+		BD0833531C64CC7800F60360 /* PlaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD0833521C64CC7800F60360 /* PlaceCell.xib */; };
+		BD0833591C64CE3900F60360 /* PlaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0833581C64CE3900F60360 /* PlaceCell.m */; };
 		BD5C19E81C62C2C000A060F3 /* PlaceDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5C19E71C62C2C000A060F3 /* PlaceDetailsViewController.m */; };
 		BD5C19EB1C62CB5C00A060F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD5C19E91C62CB5C00A060F3 /* Main.storyboard */; };
 		BD5C19EE1C62CEC500A060F3 /* AddPlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5C19ED1C62CEC500A060F3 /* AddPlaceViewController.m */; };
 		BDCC57E11C625FDA00EA2104 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC57E01C625FDA00EA2104 /* RegisterViewController.m */; };
-		BDCC57E41C62670A00EA2104 /* PlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC57E31C62670A00EA2104 /* PlacesViewController.m */; };
+		BDCC57E41C62670A00EA2104 /* PlacesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC57E31C62670A00EA2104 /* PlacesTableViewController.m */; };
 		BDCC57E91C62A9D700EA2104 /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC57E81C62A9D700EA2104 /* Place.m */; };
 		BDEF06D21C5FE17A006D238E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDEF06D11C5FE17A006D238E /* main.m */; };
 		BDEF06D51C5FE17A006D238E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDEF06D41C5FE17A006D238E /* AppDelegate.m */; };
@@ -44,6 +46,9 @@
 /* Begin PBXFileReference section */
 		575B41DDD17673057F4933AE /* Pods-DogHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DogHub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DogHub/Pods-DogHub.debug.xcconfig"; sourceTree = "<group>"; };
 		78C020E160BEC77DA3731706 /* libPods-DogHub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DogHub.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD0833521C64CC7800F60360 /* PlaceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaceCell.xib; sourceTree = "<group>"; };
+		BD0833571C64CE3900F60360 /* PlaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceCell.h; sourceTree = "<group>"; };
+		BD0833581C64CE3900F60360 /* PlaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceCell.m; sourceTree = "<group>"; };
 		BD5C19E61C62C2C000A060F3 /* PlaceDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceDetailsViewController.h; sourceTree = "<group>"; };
 		BD5C19E71C62C2C000A060F3 /* PlaceDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceDetailsViewController.m; sourceTree = "<group>"; };
 		BD5C19EA1C62CB5C00A060F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -51,8 +56,8 @@
 		BD5C19ED1C62CEC500A060F3 /* AddPlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPlaceViewController.m; sourceTree = "<group>"; };
 		BDCC57DF1C625FDA00EA2104 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		BDCC57E01C625FDA00EA2104 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
-		BDCC57E21C62670A00EA2104 /* PlacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacesViewController.h; sourceTree = "<group>"; };
-		BDCC57E31C62670A00EA2104 /* PlacesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacesViewController.m; sourceTree = "<group>"; };
+		BDCC57E21C62670A00EA2104 /* PlacesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacesTableViewController.h; sourceTree = "<group>"; };
+		BDCC57E31C62670A00EA2104 /* PlacesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacesTableViewController.m; sourceTree = "<group>"; };
 		BDCC57E71C62A9D700EA2104 /* Place.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Place.h; sourceTree = "<group>"; };
 		BDCC57E81C62A9D700EA2104 /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Place.m; sourceTree = "<group>"; };
 		BDEF06CD1C5FE17A006D238E /* DogHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +122,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BD0833511C64CC4300F60360 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD0833521C64CC7800F60360 /* PlaceCell.xib */,
+				BD0833571C64CE3900F60360 /* PlaceCell.h */,
+				BD0833581C64CE3900F60360 /* PlaceCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		BDCC57E51C62A4A600EA2104 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,8 +139,8 @@
 				BDEF06D71C5FE17A006D238E /* LoginViewController.m */,
 				BDCC57DF1C625FDA00EA2104 /* RegisterViewController.h */,
 				BDCC57E01C625FDA00EA2104 /* RegisterViewController.m */,
-				BDCC57E21C62670A00EA2104 /* PlacesViewController.h */,
-				BDCC57E31C62670A00EA2104 /* PlacesViewController.m */,
+				BDCC57E21C62670A00EA2104 /* PlacesTableViewController.h */,
+				BDCC57E31C62670A00EA2104 /* PlacesTableViewController.m */,
 				BD5C19E61C62C2C000A060F3 /* PlaceDetailsViewController.h */,
 				BD5C19E71C62C2C000A060F3 /* PlaceDetailsViewController.m */,
 				BD5C19EC1C62CEC500A060F3 /* AddPlaceViewController.h */,
@@ -168,6 +183,7 @@
 		BDEF06CF1C5FE17A006D238E /* DogHub */ = {
 			isa = PBXGroup;
 			children = (
+				BD0833511C64CC4300F60360 /* Views */,
 				BDCC57E61C62A66C00EA2104 /* Models */,
 				BDCC57E51C62A4A600EA2104 /* ViewControllers */,
 				BDEF06D31C5FE17A006D238E /* AppDelegate.h */,
@@ -320,6 +336,7 @@
 				BD5C19EB1C62CB5C00A060F3 /* Main.storyboard in Resources */,
 				BDEF06E31C5FE17A006D238E /* LaunchScreen.storyboard in Resources */,
 				BDEF06E01C5FE17A006D238E /* Assets.xcassets in Resources */,
+				BD0833531C64CC7800F60360 /* PlaceCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,12 +410,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD5C19EE1C62CEC500A060F3 /* AddPlaceViewController.m in Sources */,
+				BD0833591C64CE3900F60360 /* PlaceCell.m in Sources */,
 				BDCC57E11C625FDA00EA2104 /* RegisterViewController.m in Sources */,
 				BD5C19E81C62C2C000A060F3 /* PlaceDetailsViewController.m in Sources */,
 				BDEF06DE1C5FE17A006D238E /* DogHub.xcdatamodeld in Sources */,
 				BDCC57E91C62A9D700EA2104 /* Place.m in Sources */,
 				BDEF06D81C5FE17A006D238E /* LoginViewController.m in Sources */,
-				BDCC57E41C62670A00EA2104 /* PlacesViewController.m in Sources */,
+				BDCC57E41C62670A00EA2104 /* PlacesTableViewController.m in Sources */,
 				BDEF06D51C5FE17A006D238E /* AppDelegate.m in Sources */,
 				BDEF06D21C5FE17A006D238E /* main.m in Sources */,
 			);

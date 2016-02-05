@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PlacesViewController : UITableViewController
+@interface PlacesTableViewController : UITableViewController
 
 @property NSArray *places;
 

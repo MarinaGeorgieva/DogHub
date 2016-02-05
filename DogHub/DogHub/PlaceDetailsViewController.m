@@ -26,7 +26,7 @@
     self.descriptionLabel.text = self.place.desc;
     self.categoryLabel.text = self.place.category;
     
-    [self.place.image getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+    [self.place.img getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
         if (!error) {
             UIImage *image = [UIImage imageWithData:imageData];
             self.imageView.image = image;
