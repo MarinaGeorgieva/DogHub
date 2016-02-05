@@ -33,8 +33,8 @@
     [PFUser logInWithUsernameInBackground: username password: password block:^(PFUser *user, NSError *error) {
         if (user) {
             // Do stuff after successful login.
-            PlacesTableViewController *placesViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"allPlacesScene"];
-            [self.navigationController pushViewController:placesViewController animated:YES];
+            //PlacesTableViewController *placesViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"allPlacesScene"];
+            //[self.navigationController pushViewController:placesViewController animated:YES];
         }
         else {
             // The login failed. Check error to see why.

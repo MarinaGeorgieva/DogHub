@@ -10,8 +10,8 @@
 
 @interface PlaceCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *placeCellImageView;
-@property (weak, nonatomic) IBOutlet UILabel *placeCellNameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *placeCellCategoryLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *imgView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
 
 @end
