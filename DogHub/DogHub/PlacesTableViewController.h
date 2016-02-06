@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PlacesTableViewController : UITableViewController
+@interface PlacesTableViewController : UITableViewController<UISearchBarDelegate>
 
-@property NSArray *places;
+@property NSMutableArray *places;
+@property NSMutableArray *filteredPlaces;
 
 @end
