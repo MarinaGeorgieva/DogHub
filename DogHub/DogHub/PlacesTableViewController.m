@@ -28,6 +28,8 @@
     
     self.searchBar.delegate = self;
     
+    self.navigationController.navigationBar.hidden = NO;
+    
     UIImage *img = [UIImage imageNamed:@"doghub_logo.png"];
     UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
     [imgView setImage:img];

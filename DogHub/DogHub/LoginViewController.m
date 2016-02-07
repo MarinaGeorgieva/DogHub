@@ -15,6 +15,7 @@
 
 @property (weak, nonatomic) IBOutlet CustomTextField *usernameField;
 @property (weak, nonatomic) IBOutlet CustomTextField *passwordField;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
 
 @end
 
@@ -24,6 +25,8 @@
     [super viewDidLoad];
     
     [self initCustomFields];
+    self.navigationController.navigationBar.hidden = YES;
+    self.indicator.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,18 +34,25 @@
 }
 
 - (IBAction)login:(id)sender {
+    self.indicator.hidden = NO;
+    [self.indicator startAnimating];
+    
     NSString *username = self.usernameField.textField.text;
     NSString *password = self.passwordField.textField.text;
     [PFUser logInWithUsernameInBackground: username password: password block:^(PFUser *user, NSError *error) {
+        [self.indicator stopAnimating];
+        self.indicator.hidden = YES;
+        
         if (user) {
-            // Do stuff after successful login.
-
             UITabBarController *tabBarController = [self.storyboard instantiateViewControllerWithIdentifier:@"tabBarController"];
             [self.navigationController pushViewController:tabBarController animated:YES];
             
         }
         else {
-            // The login failed. Check error to see why.
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:[error localizedDescription] preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+            [alertController addAction:alertAction];
+            [self presentViewController:alertController animated:YES completion:nil];
         }
     }];
 }

@@ -21,11 +21,12 @@
     [Parse setApplicationId:@"FDSUIkltH2wVBv5B1CGsOMkMxiNGEX5eXt0ld5so"
                   clientKey:@"15wEjuWrySmXa5m6xM7lsaCSEEc0fAoNn29V4gl5"];
     
-    
-    self.favoritePlaces = [NSMutableArray array];
-
-    
     return YES;
+}
+
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.window endEditing:YES];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

@@ -6,8 +6,10 @@
 //  Copyright © 2016 Marina Georgieva. All rights reserved.
 //
 
+#import <CoreData/CoreData.h>
 #import <Parse/Parse.h>
 #import "AppDelegate.h"
+#import "FavoritePlace.h"
 #import "FavoritePlacesTableViewController.h"
 #import "PlaceCell.h"
 
@@ -20,10 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationController.navigationBar.hidden = NO;
     self.navigationItem.title = @"Favorites";
-    
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -34,7 +34,13 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     AppDelegate *delegate = [UIApplication sharedApplication].delegate;
-    self.favoritePlaces = delegate.favoritePlaces;
+    NSManagedObjectContext *managedObjectContext = delegate.managedObjectContext;
+    
+    NSError *err = nil;
+    NSFetchRequest* fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"FavoritePlace"];
+    NSArray* fetchedPlaces = [managedObjectContext executeFetchRequest:fetchRequest error:&err];
+    
+    self.favoritePlaces = [NSMutableArray arrayWithArray:fetchedPlaces];
     [self.tableView reloadData];
 }
 
@@ -55,8 +61,7 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:@"PlaceCell" owner:self options:nil] objectAtIndex:0];
     }
     
-    /*
-    PFFile *imageFile = [[self.favoritePlaces objectAtIndex:indexPath.row] img];
+    PFFile *imageFile = [PFFile fileWithName:@"jdhs.png" data:[[self.favoritePlaces objectAtIndex:indexPath.row] img]];
     [imageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
         if (!error) {
             UIImage *image = [UIImage imageWithData:imageData];
@@ -67,7 +72,6 @@
     cell.imgView.layer.cornerRadius = 20;
     cell.imgView.clipsToBounds = YES;
     cell.imgView.layer.borderColor = [UIColor redColor].CGColor;
-     */
     cell.nameLabel.text = [[self.favoritePlaces objectAtIndex:indexPath.row] name];
     cell.categoryLabel.text = [[self.favoritePlaces objectAtIndex:indexPath.row] category];
     

@@ -24,6 +24,7 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     
+    self.navigationController.navigationBar.hidden = NO;
     self.navigationItem.title = @"Add New Place";
 }
 
