@@ -23,6 +23,7 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     
+    self.title = self.place.name;
     self.nameLabel.text = self.place.name;
     self.categoryLabel.text = self.place.category;
     self.descriptionTextView.text = self.place.desc;

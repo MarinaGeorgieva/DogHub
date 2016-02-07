@@ -23,6 +23,8 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    
+    self.navigationItem.title = @"Add New Place";
 }
 
 - (IBAction)add:(id)sender {

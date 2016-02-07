@@ -13,6 +13,8 @@
 		BD5C19E81C62C2C000A060F3 /* PlaceDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5C19E71C62C2C000A060F3 /* PlaceDetailsViewController.m */; };
 		BD5C19EB1C62CB5C00A060F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD5C19E91C62CB5C00A060F3 /* Main.storyboard */; };
 		BD5C19EE1C62CEC500A060F3 /* AddPlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5C19ED1C62CEC500A060F3 /* AddPlaceViewController.m */; };
+		BD954FB41C67366C009FB244 /* CustomTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD954FB31C67366C009FB244 /* CustomTextField.xib */; };
+		BD954FB71C6736A5009FB244 /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BD954FB61C6736A5009FB244 /* CustomTextField.m */; };
 		BDCC57E11C625FDA00EA2104 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC57E01C625FDA00EA2104 /* RegisterViewController.m */; };
 		BDCC57E41C62670A00EA2104 /* PlacesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC57E31C62670A00EA2104 /* PlacesTableViewController.m */; };
 		BDCC57E91C62A9D700EA2104 /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC57E81C62A9D700EA2104 /* Place.m */; };
@@ -55,6 +57,9 @@
 		BD5C19EA1C62CB5C00A060F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD5C19EC1C62CEC500A060F3 /* AddPlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPlaceViewController.h; sourceTree = "<group>"; };
 		BD5C19ED1C62CEC500A060F3 /* AddPlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPlaceViewController.m; sourceTree = "<group>"; };
+		BD954FB31C67366C009FB244 /* CustomTextField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTextField.xib; sourceTree = "<group>"; };
+		BD954FB51C6736A5009FB244 /* CustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTextField.h; sourceTree = "<group>"; };
+		BD954FB61C6736A5009FB244 /* CustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTextField.m; sourceTree = "<group>"; };
 		BDCC57DF1C625FDA00EA2104 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		BDCC57E01C625FDA00EA2104 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		BDCC57E21C62670A00EA2104 /* PlacesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacesTableViewController.h; sourceTree = "<group>"; };
@@ -131,6 +136,9 @@
 				BD0833521C64CC7800F60360 /* PlaceCell.xib */,
 				BD0833571C64CE3900F60360 /* PlaceCell.h */,
 				BD0833581C64CE3900F60360 /* PlaceCell.m */,
+				BD954FB31C67366C009FB244 /* CustomTextField.xib */,
+				BD954FB51C6736A5009FB244 /* CustomTextField.h */,
+				BD954FB61C6736A5009FB244 /* CustomTextField.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -338,6 +346,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD954FB41C67366C009FB244 /* CustomTextField.xib in Resources */,
 				BD5C19EB1C62CB5C00A060F3 /* Main.storyboard in Resources */,
 				BDEF06E31C5FE17A006D238E /* LaunchScreen.storyboard in Resources */,
 				BDEF06E01C5FE17A006D238E /* Assets.xcassets in Resources */,
@@ -418,6 +427,7 @@
 				BD0833591C64CE3900F60360 /* PlaceCell.m in Sources */,
 				BDCE006F1C66681F004291E4 /* FavoritePlacesTableViewController.m in Sources */,
 				BDCC57E11C625FDA00EA2104 /* RegisterViewController.m in Sources */,
+				BD954FB71C6736A5009FB244 /* CustomTextField.m in Sources */,
 				BD5C19E81C62C2C000A060F3 /* PlaceDetailsViewController.m in Sources */,
 				BDEF06DE1C5FE17A006D238E /* DogHub.xcdatamodeld in Sources */,
 				BDCC57E91C62A9D700EA2104 /* Place.m in Sources */,

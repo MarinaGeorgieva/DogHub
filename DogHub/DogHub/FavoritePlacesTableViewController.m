@@ -20,6 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationItem.title = @"Favorites";
+    
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
