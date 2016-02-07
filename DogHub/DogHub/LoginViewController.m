@@ -45,8 +45,8 @@
         
         if (user) {
             UITabBarController *tabBarController = [self.storyboard instantiateViewControllerWithIdentifier:@"tabBarController"];
-            [self.navigationController pushViewController:tabBarController animated:YES];
             
+            [self presentViewController:tabBarController animated:YES completion:nil];
         }
         else {
             UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:[error localizedDescription] preferredStyle:UIAlertControllerStyleAlert];
@@ -63,6 +63,10 @@
     self.passwordField.textField.placeholder = @"Password";
     self.passwordField.textField.secureTextEntry = YES;
     self.passwordField.iconImageView.image = [UIImage imageNamed:@"passwordIcon"];
+}
+
+-(IBAction)unwind:(UIStoryboardSegue *)segue{
+    
 }
 
 @end

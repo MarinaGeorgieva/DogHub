@@ -44,14 +44,11 @@
     [self.heartImageView addGestureRecognizer:longPress];
 }
 
-/*- (IBAction)addToFavorites:(id)sender {
-    AppDelegate *delegate = [UIApplication sharedApplication].delegate;
-    [delegate.favoritePlaces addObject:self.place];
-}
-*/
-
 - (void)addToFavorites:(UILongPressGestureRecognizer *) sender{
-    NSLog(@"Long press");
+    if (sender.state != UIGestureRecognizerStateEnded) {
+        return;
+    }
+    
     self.heartImageView.image = [UIImage imageNamed:@"filledHeart"];
     
     AppDelegate *delegate = [UIApplication sharedApplication].delegate;
@@ -67,11 +64,16 @@
     
     BOOL isOK  = [managedObjectContext save:&err];
     if(!isOK){
-        
-        NSLog(@"%@", [err localizedDescription]);
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:[err localizedDescription] preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+        [alertController addAction:alertAction];
+        [self presentViewController:alertController animated:YES completion:nil];
     }
     else {
-        NSLog(@"Saved");
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"" message:[NSString stringWithFormat:@"%@ added to Favorites", self.place.name] preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+        [alertController addAction:alertAction];
+        [self presentViewController:alertController animated:YES completion:nil];
     }
 }
 
