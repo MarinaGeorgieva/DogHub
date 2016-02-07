@@ -6,8 +6,9 @@
 //  Copyright © 2016 Marina Georgieva. All rights reserved.
 //
 
-#import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import "AppDelegate.h"
+#import "LoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,9 +18,26 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+   
     [Parse setApplicationId:@"FDSUIkltH2wVBv5B1CGsOMkMxiNGEX5eXt0ld5so"
                   clientKey:@"15wEjuWrySmXa5m6xM7lsaCSEEc0fAoNn29V4gl5"];
+
+
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser) {
+        // do stuff with the user
+        UITabBarController *rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"tabBarController"];
+        self.window.rootViewController = rootViewController;
+    }
+    else {
+        // show the signup or login screen
+        LoginViewController *rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"loginScene"];
+        self.window.rootViewController = rootViewController;
+    }
+    [self.window makeKeyAndVisible];
     
     return YES;
 }

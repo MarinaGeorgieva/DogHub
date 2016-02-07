@@ -28,7 +28,6 @@
     
     [self initCustomFields];
     
-    self.navigationController.navigationBar.hidden = NO;
     self.indicator.hidden = YES;
 }
 

@@ -27,14 +27,17 @@
     [self getAllPlaces];
     
     self.searchBar.delegate = self;
+    self.navigationController.navigationBar.tintColor = [UIColor purpleColor];
+    self.navigationItem.title = @"Home";
+    self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor purpleColor] forKey:NSForegroundColorAttributeName];
     
-    self.navigationController.navigationBar.hidden = NO;
-    
+    /*
     UIImage *img = [UIImage imageNamed:@"doghub_logo.png"];
     UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
     [imgView setImage:img];
     [imgView setContentMode:UIViewContentModeScaleAspectFit];
     self.navigationItem.titleView = imgView;
+     */
     
     UIBarButtonItem *addBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showAdd)];
     self.navigationItem.rightBarButtonItem = addBarButton;

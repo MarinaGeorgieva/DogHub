@@ -25,7 +25,6 @@
     [super viewDidLoad];
     
     [self initCustomFields];
-    self.navigationController.navigationBar.hidden = YES;
     self.indicator.hidden = YES;
 }
 
