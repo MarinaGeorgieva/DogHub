@@ -82,30 +82,35 @@
         
         AppDelegate *delegate = [UIApplication sharedApplication].delegate;
         NSManagedObjectContext *managedObjectContext = delegate.managedObjectContext;
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
         [managedObjectContext deleteObject:[self.favoritePlaces objectAtIndex:indexPath.row]];
-        [tableView reloadData]; // tell table to refresh now
+        
+        NSError *err = nil;
+        
+        BOOL isOK  = [managedObjectContext save:&err];
+        if(!isOK){
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:[err localizedDescription] preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+            [alertController addAction:alertAction];
+            [self presentViewController:alertController animated:YES completion:nil];
+        }
+        
+        [self.favoritePlaces removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [tableView reloadData];
     }
-}
-
--(void)setEditing:(BOOL)editing animated:(BOOL)animated {
-    [super setEditing:editing animated:animated];
-    UITableView* tableView = self.view.subviews[0];
-    [tableView setEditing:editing animated:animated];
-    
 }
 
 -(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
     return UITableViewCellEditingStyleDelete;
 }
 
-/*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
+
 
 /*
 // Override to support editing the table view.

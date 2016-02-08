@@ -13,6 +13,9 @@
 #import "DogHub-Swift.h"
 
 @interface PlaceDetailsViewController()
+{
+    BOOL _isFavorite;
+}
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
@@ -41,8 +44,10 @@
             self.imageView.image = image;
         }
     }];
+
+    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height + 160);
     
-    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height + 50);
+    _isFavorite = NO;
     
     UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(addToFavorites:)];
     [doubleTap setNumberOfTapsRequired:2];
@@ -51,31 +56,59 @@
 
 - (void)addToFavorites:(UILongPressGestureRecognizer *) sender{
     
-    self.heartImageView.image = [UIImage imageNamed:@"filledHeart"];
-    
     AppDelegate *delegate = [UIApplication sharedApplication].delegate;
     NSManagedObjectContext *managedObjectContext = delegate.managedObjectContext;
     
-    FavoritePlace *favoritePlace = [NSEntityDescription insertNewObjectForEntityForName:@"FavoritePlace" inManagedObjectContext:managedObjectContext];
-    favoritePlace.name = self.place.name;
-    favoritePlace.category = self.place.category;
-    favoritePlace.desc = self.place.desc;
-    favoritePlace.img = UIImagePNGRepresentation(self.imageView.image);
-    
     NSError *err = nil;
-    
-    BOOL isOK  = [managedObjectContext save:&err];
-    if(!isOK){
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:[err localizedDescription] preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
-        [alertController addAction:alertAction];
-        [self presentViewController:alertController animated:YES completion:nil];
+
+    if (!_isFavorite) {
+        _isFavorite = YES;
+        self.heartImageView.image = [UIImage imageNamed:@"filledHeart"];
+        
+        FavoritePlace *favoritePlace = [NSEntityDescription insertNewObjectForEntityForName:@"FavoritePlace" inManagedObjectContext:managedObjectContext];
+        favoritePlace.name = self.place.name;
+        favoritePlace.category = self.place.category;
+        favoritePlace.desc = self.place.desc;
+        favoritePlace.img = UIImagePNGRepresentation(self.imageView.image);
+        
+        BOOL isOK  = [managedObjectContext save:&err];
+        if(!isOK){
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:[err localizedDescription] preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+            [alertController addAction:alertAction];
+            [self presentViewController:alertController animated:YES completion:nil];
+        }
+        else {
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"" message:[NSString stringWithFormat:@"%@ added to Favorites", self.place.name] preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+            [alertController addAction:alertAction];
+            [self presentViewController:alertController animated:YES completion:nil];
+        }
     }
     else {
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"" message:[NSString stringWithFormat:@"%@ added to Favorites", self.place.name] preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
-        [alertController addAction:alertAction];
-        [self presentViewController:alertController animated:YES completion:nil];
+        _isFavorite = NO;
+        self.heartImageView.image = [UIImage imageNamed:@"emptyHeart"];
+        
+        NSFetchRequest* fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"FavoritePlace"];
+        [fetchRequest setFetchLimit:1];
+        [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"name == %@", self.place.name]];
+        NSArray* fetchedPlaces = [managedObjectContext executeFetchRequest:fetchRequest error:&err];
+        
+        [managedObjectContext deleteObject: [fetchedPlaces objectAtIndex:0]];
+        
+        BOOL isOK  = [managedObjectContext save:&err];
+        if(!isOK){
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:[err localizedDescription] preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+            [alertController addAction:alertAction];
+            [self presentViewController:alertController animated:YES completion:nil];
+        }
+        else {
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"" message:[NSString stringWithFormat:@"%@ Removed from Favorites", self.place.name] preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+            [alertController addAction:alertAction];
+            [self presentViewController:alertController animated:YES completion:nil];
+        }
     }
 }
 

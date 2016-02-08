@@ -144,11 +144,8 @@
                                 <rect key="frame" x="-1" y="0.0" width="376" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ps-57-drO">
-                                        <rect key="frame" x="0.0" y="-162" width="376" height="829"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="376" height="829"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yIJ-ux-XKM">
-                                                <rect key="frame" x="0.0" y="60" width="375" height="244"/>
-                                            </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7O-Er-vV4">
                                                 <rect key="frame" x="8" y="416" width="100" height="42"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -182,7 +179,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptyHeart" translatesAutoresizingMaskIntoConstraints="NO" id="7Gv-gT-XW7">
-                                                <rect key="frame" x="328" y="314" width="40" height="40"/>
+                                                <rect key="frame" x="323" y="310" width="40" height="40"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wg-RF-nsa">
                                                 <rect key="frame" x="8" y="571" width="355" height="38"/>
@@ -199,6 +196,9 @@
                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Bb6-S8-KgT">
                                                 <rect key="frame" x="8" y="627" width="353" height="194"/>
                                             </mapView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yIJ-ux-XKM">
+                                                <rect key="frame" x="0.0" y="41" width="375" height="253"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
