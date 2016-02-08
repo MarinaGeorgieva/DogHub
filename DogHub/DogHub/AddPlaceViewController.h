@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddPlaceViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface AddPlaceViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 
 @end

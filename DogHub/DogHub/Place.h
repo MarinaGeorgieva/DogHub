@@ -15,12 +15,14 @@
 @property (strong, nonatomic) NSString *desc;
 @property (strong, nonatomic) NSString *category;
 @property (strong, nonatomic) PFFile *img;
+@property (strong, nonatomic) PFGeoPoint *location;
 
 + (NSString *)parseClassName;
 
 + (Place *) placeWithName: (NSString *) name
-       andWithDescription: (NSString *) desc
-          andWithCategory: (NSString *) category
-             andWithImage: (PFFile *) img;
+              description: (NSString *) desc
+                 category: (NSString *) category
+                 location: (PFGeoPoint *) location
+                    andImage: (PFFile *) img;
 
 @end

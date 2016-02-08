@@ -10,6 +10,7 @@
 		88B1D5FFFEF0F01CE7CB0E60 /* libPods-DogHub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C020E160BEC77DA3731706 /* libPods-DogHub.a */; };
 		BD0833531C64CC7800F60360 /* PlaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD0833521C64CC7800F60360 /* PlaceCell.xib */; };
 		BD0833591C64CE3900F60360 /* PlaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0833581C64CE3900F60360 /* PlaceCell.m */; };
+		BD310C5D1C680FB600208099 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD310C5C1C680FB600208099 /* MapKit.framework */; };
 		BD5C19E81C62C2C000A060F3 /* PlaceDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5C19E71C62C2C000A060F3 /* PlaceDetailsViewController.m */; };
 		BD5C19EB1C62CB5C00A060F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD5C19E91C62CB5C00A060F3 /* Main.storyboard */; };
 		BD5C19EE1C62CEC500A060F3 /* AddPlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5C19ED1C62CEC500A060F3 /* AddPlaceViewController.m */; };
@@ -54,6 +55,7 @@
 		BD0833521C64CC7800F60360 /* PlaceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaceCell.xib; sourceTree = "<group>"; };
 		BD0833571C64CE3900F60360 /* PlaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceCell.h; sourceTree = "<group>"; };
 		BD0833581C64CE3900F60360 /* PlaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceCell.m; sourceTree = "<group>"; };
+		BD310C5C1C680FB600208099 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BD5C19E61C62C2C000A060F3 /* PlaceDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceDetailsViewController.h; sourceTree = "<group>"; };
 		BD5C19E71C62C2C000A060F3 /* PlaceDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceDetailsViewController.m; sourceTree = "<group>"; };
 		BD5C19EA1C62CB5C00A060F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD310C5D1C680FB600208099 /* MapKit.framework in Frameworks */,
 				88B1D5FFFEF0F01CE7CB0E60 /* libPods-DogHub.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,6 +125,7 @@
 		4005C76D5307805F4DC4B965 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BD310C5C1C680FB600208099 /* MapKit.framework */,
 				78C020E160BEC77DA3731706 /* libPods-DogHub.a */,
 			);
 			name = Frameworks;
@@ -318,6 +322,11 @@
 					BDEF06CC1C5FE17A006D238E = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = PXEG9GD6UJ;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					BDEF06E81C5FE17A006D238E = {
 						CreatedOnToolsVersion = 7.2;

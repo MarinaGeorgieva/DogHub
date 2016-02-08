@@ -12,6 +12,10 @@
 #import <Parse/Parse.h>
 
 @interface RegisterViewController()
+{
+    UIAlertController *_alertController;
+    UIAlertAction *_alertAction;
+}
 
 @property (weak, nonatomic) IBOutlet CustomTextField *usernameField;
 @property (weak, nonatomic) IBOutlet CustomTextField *passwordField;
@@ -35,49 +39,50 @@
     self.indicator.hidden = NO;
     [self.indicator startAnimating];
     
-    UIAlertController *alertController = nil;
-    UIAlertAction *alertAction = nil;
-    
     PFUser *user = [PFUser user];
     
-    if ([self.usernameField.textField.text length] >= 5) {
-        user.username = self.usernameField.textField.text;
+    NSString *username = [self.usernameField.textField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    NSString *password = [self.passwordField.textField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    NSString *confirmPassword = [self.confirmPasswordField.textField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    
+    if ([username length] >= 5) {
+        user.username = username;
     }
     else {
         [self.indicator stopAnimating];
         self.indicator.hidden = YES;
         
-        alertController = [UIAlertController alertControllerWithTitle:@"Error" message:@"Username must be atleast 5 characters" preferredStyle:UIAlertControllerStyleAlert];
-        alertAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
-        [alertController addAction:alertAction];
-        [self presentViewController:alertController animated:YES completion:nil];
+        _alertController = [UIAlertController alertControllerWithTitle:@"Error" message:@"Username must be atleast 5 characters" preferredStyle:UIAlertControllerStyleAlert];
+        _alertAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+        [_alertController addAction:_alertAction];
+        [self presentViewController:_alertController animated:YES completion:nil];
         return;
     }
     
-    if ([self.passwordField.textField.text length] < 5) {
+    if ([password length] < 5) {
         [self.indicator stopAnimating];
         self.indicator.hidden = YES;
         
-        alertController = [UIAlertController alertControllerWithTitle:@"Error" message:@"Password must be atleast 5 characters" preferredStyle:UIAlertControllerStyleAlert];
-        alertAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
-        [alertController addAction:alertAction];
+        _alertController = [UIAlertController alertControllerWithTitle:@"Error" message:@"Password must be atleast 5 characters" preferredStyle:UIAlertControllerStyleAlert];
+        _alertAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+        [_alertController addAction:_alertAction];
 
-        [self presentViewController:alertController animated:YES completion:nil];
+        [self presentViewController:_alertController animated:YES completion:nil];
         return;
     }
     
-    if ([self.passwordField.textField.text isEqualToString:self.confirmPasswordField.textField.text]) {
-       user.password = self.passwordField.textField.text;
+    if ([password isEqualToString:confirmPassword]) {
+       user.password = password;
     }
     else {
         [self.indicator stopAnimating];
         self.indicator.hidden = YES;
         
-        alertController = [UIAlertController alertControllerWithTitle:@"Error" message:@"Password and Confirm Password do not match" preferredStyle:UIAlertControllerStyleAlert];
-        alertAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
-        [alertController addAction:alertAction];
+        _alertController = [UIAlertController alertControllerWithTitle:@"Error" message:@"Password and Confirm Password do not match" preferredStyle:UIAlertControllerStyleAlert];
+        _alertAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+        [_alertController addAction:_alertAction];
 
-        [self presentViewController:alertController animated:YES completion:nil];
+        [self presentViewController:_alertController animated:YES completion:nil];
         return;
  
     }
@@ -86,11 +91,11 @@
         [self.indicator stopAnimating];
         self.indicator.hidden = YES;
         
-        alertController = [UIAlertController alertControllerWithTitle:@"Error" message:@"Invalid e-mail" preferredStyle:UIAlertControllerStyleAlert];
-        alertAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
-        [alertController addAction:alertAction];
+        _alertController = [UIAlertController alertControllerWithTitle:@"Error" message:@"Invalid e-mail" preferredStyle:UIAlertControllerStyleAlert];
+        _alertAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+        [_alertController addAction:_alertAction];
 
-        [self presentViewController:alertController animated:YES completion:nil];
+        [self presentViewController:_alertController animated:YES completion:nil];
         return;
     }
     
@@ -100,11 +105,13 @@
         [self.indicator stopAnimating];
         self.indicator.hidden = YES;
         
-        if (!error) {   // Hooray! Let them use the app now.
-            [self.navigationController popToRootViewControllerAnimated:YES];
+        if (!error) {
+            LoginViewController *loginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"loginScene"];
+            [self presentViewController:loginViewController animated:YES completion:nil];
+            // [self.navigationController popToRootViewControllerAnimated:YES];
         }
         else {
-            NSString *errorString = [error userInfo][@"error"];   // Show the errorString somewhere and let the user try again.
+            NSString *errorString = [error userInfo][@"error"];
             UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:errorString preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
             [alertController addAction:alertAction];
@@ -115,7 +122,6 @@
 }
 
 -(void) initCustomFields{
-    
     self.usernameField.textField.placeholder = @"Username";
     self.usernameField.iconImageView.image = [UIImage imageNamed:@"userIcon"];
     self.passwordField.textField.placeholder = @"Password";
