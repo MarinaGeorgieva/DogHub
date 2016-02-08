@@ -11,6 +11,8 @@
 		BD0833531C64CC7800F60360 /* PlaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD0833521C64CC7800F60360 /* PlaceCell.xib */; };
 		BD0833591C64CE3900F60360 /* PlaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0833581C64CE3900F60360 /* PlaceCell.m */; };
 		BD310C5D1C680FB600208099 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD310C5C1C680FB600208099 /* MapKit.framework */; };
+		BD310C601C683E7900208099 /* PlaceDirectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD310C5F1C683E7900208099 /* PlaceDirectionsViewController.swift */; };
+		BD310C621C68475100208099 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD310C611C68475100208099 /* CoreLocation.framework */; };
 		BD5C19E81C62C2C000A060F3 /* PlaceDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5C19E71C62C2C000A060F3 /* PlaceDetailsViewController.m */; };
 		BD5C19EB1C62CB5C00A060F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD5C19E91C62CB5C00A060F3 /* Main.storyboard */; };
 		BD5C19EE1C62CEC500A060F3 /* AddPlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5C19ED1C62CEC500A060F3 /* AddPlaceViewController.m */; };
@@ -56,6 +58,9 @@
 		BD0833571C64CE3900F60360 /* PlaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceCell.h; sourceTree = "<group>"; };
 		BD0833581C64CE3900F60360 /* PlaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceCell.m; sourceTree = "<group>"; };
 		BD310C5C1C680FB600208099 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		BD310C5E1C683E7800208099 /* DogHub-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DogHub-Bridging-Header.h"; sourceTree = "<group>"; };
+		BD310C5F1C683E7900208099 /* PlaceDirectionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDirectionsViewController.swift; sourceTree = "<group>"; };
+		BD310C611C68475100208099 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		BD5C19E61C62C2C000A060F3 /* PlaceDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceDetailsViewController.h; sourceTree = "<group>"; };
 		BD5C19E71C62C2C000A060F3 /* PlaceDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceDetailsViewController.m; sourceTree = "<group>"; };
 		BD5C19EA1C62CB5C00A060F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -100,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD310C621C68475100208099 /* CoreLocation.framework in Frameworks */,
 				BD310C5D1C680FB600208099 /* MapKit.framework in Frameworks */,
 				88B1D5FFFEF0F01CE7CB0E60 /* libPods-DogHub.a in Frameworks */,
 			);
@@ -125,6 +131,7 @@
 		4005C76D5307805F4DC4B965 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BD310C611C68475100208099 /* CoreLocation.framework */,
 				BD310C5C1C680FB600208099 /* MapKit.framework */,
 				78C020E160BEC77DA3731706 /* libPods-DogHub.a */,
 			);
@@ -168,6 +175,8 @@
 				BD5C19ED1C62CEC500A060F3 /* AddPlaceViewController.m */,
 				BDCE006D1C66681F004291E4 /* FavoritePlacesTableViewController.h */,
 				BDCE006E1C66681F004291E4 /* FavoritePlacesTableViewController.m */,
+				BD310C5F1C683E7900208099 /* PlaceDirectionsViewController.swift */,
+				BD310C5E1C683E7800208099 /* DogHub-Bridging-Header.h */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -456,6 +465,7 @@
 				BDCC57E41C62670A00EA2104 /* PlacesTableViewController.m in Sources */,
 				BDEF06D51C5FE17A006D238E /* AppDelegate.m in Sources */,
 				BDEF06D21C5FE17A006D238E /* main.m in Sources */,
+				BD310C601C683E7900208099 /* PlaceDirectionsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,10 +607,14 @@
 			baseConfigurationReference = 575B41DDD17673057F4933AE /* Pods-DogHub.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = DogHub/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mg.DogHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DogHub/DogHub-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -609,10 +623,13 @@
 			baseConfigurationReference = EBC0222D39122CDAD4F7CD80 /* Pods-DogHub.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = DogHub/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mg.DogHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DogHub/DogHub-Bridging-Header.h";
 			};
 			name = Release;
 		};

@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "FavoritePlace.h"
 #import "PlaceDetailsViewController.h"
+#import "DogHub-Swift.h"
 
 @interface PlaceDetailsViewController()
 
@@ -18,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIImageView *heartImageView;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end
 
@@ -38,6 +41,8 @@
             self.imageView.image = image;
         }
     }];
+    
+    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height + 50);
     
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(addToFavorites:)];
     longPress.minimumPressDuration = 1;
@@ -75,6 +80,19 @@
         [alertController addAction:alertAction];
         [self presentViewController:alertController animated:YES completion:nil];
     }
+}
+
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+//    PlaceDirectionsViewController *directionsViewController = [segue destinationViewController];
+//}
+
+- (IBAction)getLocation:(id)sender {
+    CLLocationCoordinate2D myCoordinate = {self.place.location.latitude, self.place.location.longitude};
+    MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
+    point.coordinate = myCoordinate;
+    
+    //Drop pin on map
+    [self.mapView addAnnotation:point];
 }
 
 @end

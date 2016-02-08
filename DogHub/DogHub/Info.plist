@@ -26,6 +26,8 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string></string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Dog Hub wants to use your location</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
