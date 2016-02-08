@@ -44,6 +44,7 @@
         
         if (user) {
             UITabBarController *tabBarController = [self.storyboard instantiateViewControllerWithIdentifier:@"tabBarController"];
+            tabBarController.tabBar.tintColor = [UIColor purpleColor];
             
             [self presentViewController:tabBarController animated:YES completion:nil];
         }

@@ -517,11 +517,11 @@
             </objects>
             <point key="canvasLocation" x="2127.5" y="267.5"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--All-->
         <scene sceneID="pBW-nT-nad">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="l4X-Oo-ep0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="QDR-iY-hWs"/>
+                    <tabBarItem key="tabBarItem" title="All" image="homeIcon" id="QDR-iY-hWs"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xxq-Za-05A">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -558,6 +558,7 @@
     </scenes>
     <resources>
         <image name="emptyHeart" width="2000" height="2000"/>
+        <image name="homeIcon" width="35" height="35"/>
         <image name="logo" width="302" height="283"/>
     </resources>
 </document>

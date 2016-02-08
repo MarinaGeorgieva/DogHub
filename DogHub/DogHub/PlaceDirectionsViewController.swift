@@ -13,12 +13,16 @@ import CoreLocation
 @objc class PlaceDirectionsViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
-    
+  
+    var placeLocation : CLLocation!
     var locationManager: CLLocationManager!
     var previousLocation : CLLocation!
     
-    // public var placeLongitude: CGFloat = 0
-    // public var placeLatitude: CGFloat = 0
+    var placeLongitude: NSNumber = 0
+    var placeLatitude: NSNumber = 0
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

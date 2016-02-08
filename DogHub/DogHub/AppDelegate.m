@@ -30,6 +30,7 @@
     if (currentUser) {
         // do stuff with the user
         UITabBarController *rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"tabBarController"];
+        rootViewController.tabBar.tintColor = [UIColor purpleColor];
         self.window.rootViewController = rootViewController;
     }
     else {
@@ -37,6 +38,7 @@
         LoginViewController *rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"loginScene"];
         self.window.rootViewController = rootViewController;
     }
+    
     [self.window makeKeyAndVisible];
     
     return YES;

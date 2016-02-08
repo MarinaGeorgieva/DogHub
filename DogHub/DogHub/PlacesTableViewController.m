@@ -28,7 +28,7 @@
     
     self.searchBar.delegate = self;
     self.navigationController.navigationBar.tintColor = [UIColor purpleColor];
-    self.navigationItem.title = @"Home";
+    self.navigationItem.title = @"All";
     self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor purpleColor] forKey:NSForegroundColorAttributeName];
     
     /*
@@ -37,7 +37,7 @@
     [imgView setImage:img];
     [imgView setContentMode:UIViewContentModeScaleAspectFit];
     self.navigationItem.titleView = imgView;
-     */
+    */
     
     UIBarButtonItem *addBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showAdd)];
     self.navigationItem.rightBarButtonItem = addBarButton;

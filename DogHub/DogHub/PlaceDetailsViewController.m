@@ -44,15 +44,12 @@
     
     self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height + 50);
     
-    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(addToFavorites:)];
-    longPress.minimumPressDuration = 1;
-    [self.heartImageView addGestureRecognizer:longPress];
+    UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(addToFavorites:)];
+    [doubleTap setNumberOfTapsRequired:2];
+    [self.heartImageView addGestureRecognizer:doubleTap];
 }
 
 - (void)addToFavorites:(UILongPressGestureRecognizer *) sender{
-    if (sender.state != UIGestureRecognizerStateEnded) {
-        return;
-    }
     
     self.heartImageView.image = [UIImage imageNamed:@"filledHeart"];
     
@@ -82,9 +79,12 @@
     }
 }
 
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-//    PlaceDirectionsViewController *directionsViewController = [segue destinationViewController];
-//}
+/*
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    PlaceDirectionsViewController *directionsViewController = [segue destinationViewController];
+    directionsViewController.pl
+}
+*/
 
 - (IBAction)getLocation:(id)sender {
     CLLocationCoordinate2D myCoordinate = {self.place.location.latitude, self.place.location.longitude};

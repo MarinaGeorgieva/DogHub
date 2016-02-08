@@ -77,6 +77,28 @@
     return 85;
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        AppDelegate *delegate = [UIApplication sharedApplication].delegate;
+        NSManagedObjectContext *managedObjectContext = delegate.managedObjectContext;
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [managedObjectContext deleteObject:[self.favoritePlaces objectAtIndex:indexPath.row]];
+        [tableView reloadData]; // tell table to refresh now
+    }
+}
+
+-(void)setEditing:(BOOL)editing animated:(BOOL)animated {
+    [super setEditing:editing animated:animated];
+    UITableView* tableView = self.view.subviews[0];
+    [tableView setEditing:editing animated:animated];
+    
+}
+
+-(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewCellEditingStyleDelete;
+}
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
